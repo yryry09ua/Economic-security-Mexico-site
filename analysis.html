@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Аналітична сторінка: індикатори економічної безпеки Мексики за 2015–2024 роки.">
+  <title>Аналітика економічної безпеки Мексики</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar"><div class="container nav">
+  <a class="brand" href="index.html"><span class="brand-mark">₥</span><span>ECON<span style="color:var(--green)">SEC</span> / MX</span></a>
+  <nav class="navlinks" aria-label="Основна навігація"><a href="index.html">Головна</a><a class="active" href="analysis.html">Аналітика Мексики</a></nav>
+  <a class="nav-cta" href="index.html#author">Про автора</a>
+</div></header>
+<main>
+  <section class="page-hero"><div class="container">
+    <span class="eyebrow">Аналітична сторінка · Мексика</span>
+    <h1 class="page-title">Оцінювання економічної<br>безпеки країни</h1>
+    <p>Аналіз сформовано за навчальною таблицею за 2015–2024 роки. Фактичні значення зіставлено з характеристичними межами Методичних рекомендацій щодо розрахунку рівня економічної безпеки України (наказ № 1277 від 29.10.2013), які використовуються тут як методична база навчального завдання.</p>
+  </div></section>
+  <section class="section" style="padding-top:0"><div class="container">
+    <div class="kpi-grid">
+      <div class="kpi"><strong>38,49</strong><span>ц/га · урожайність зернових</span></div>
+      <div class="kpi"><strong>0,965</strong><span>раза · експорт / імпорт</span></div>
+      <div class="kpi"><strong>0,303%</strong><span>ВВП · витрати на R&D</span></div>
+      <div class="kpi"><strong>45,24%</strong><span>ВВП · борг центрального уряду</span></div>
+    </div>
+
+    <div class="analysis-layout">
+      <section class="chart-card">
+        <div class="chart-head"><h3>Динаміка індикатора</h3><select id="indicatorSelect" class="select" aria-label="Оберіть індикатор"></select></div>
+        <div class="chart-wrap" id="chartWrap" role="img" aria-label="Графік динаміки вибраного індикатора"></div>
+        <div class="chart-legend"><span><i class="legend-dot"></i>Фактичне значення</span><span>Пунктир — середнє за доступний період</span></div>
+      </section>
+      <aside class="method-card">
+        <span class="eyebrow">Порівняння з методикою</span><h3 id="methodTitle">Порогові значення</h3>
+        <p id="methodText">Оберіть індикатор, щоб переглянути середнє значення, його рівень і методичне пояснення.</p>
+        <div class="range-list" id="rangeList"></div>
+        <div id="methodNote" class="source-box"></div>
+      </aside>
+    </div>
+
+    <section class="table-card">
+      <div class="table-top"><div><h3>Зведена таблиця оцінювання</h3><div class="small muted">Середні значення за доступні роки у вихідному файлі</div></div><button class="button secondary" id="downloadCsv" type="button">Завантажити CSV ↓</button></div>
+      <div class="table-scroll"><table><thead><tr><th>Індикатор</th><th>Середнє</th><th>Порогові значення</th><th>Рівень</th><th>Тенденція</th></tr></thead><tbody id="summaryTable"></tbody></table></div>
+    </section>
+
+    <div class="section-head" style="margin:34px 0 18px"><div><span class="eyebrow">Результати дослідження</span><h2>Безпечні та небезпечні тенденції</h2><p class="section-intro">Динаміка показників не завжди збігається з поточним рівнем безпеки: поліпшення може відбуватися навіть тоді, коли значення ще перебуває в небезпечній зоні.</p></div></div>
+    <div class="detail-grid">
+      <article class="insight"><h4><span style="color:var(--green)">↗</span> Позитивні зміни</h4><div class="risk-list">
+        <div class="risk"><span class="risk-icon safe-icon">+</span><p>Урожайність зернових у 2024 році була вищою, ніж у 2015 році, хоча після піку 2023 року відбулося зниження.</p></div>
+        <div class="risk"><span class="risk-icon safe-icon">+</span><p>Тривалість життя жінок і чоловіків відновилася після падіння 2020–2021 років.</p></div>
+        <div class="risk"><span class="risk-icon safe-icon">+</span><p>Смертність немовлят поступово знижувалася; співвідношення експорту до імпорту покращилося проти 2015 року.</p></div>
+        <div class="risk"><span class="risk-icon safe-icon">+</span><p>Децильний коефіцієнт доходів зменшився з 19,68 до 15,90 раза за доступними спостереженнями.</p></div>
+      </div></article>
+      <article class="insight"><h4><span style="color:var(--red)">↘</span> Ключові загрози</h4><div class="risk-list">
+        <div class="risk"><span class="risk-icon">!</span><p>Витрати на дослідження і розробки знизилися до 0,254 % ВВП у 2024 році, послаблюючи інноваційний потенціал.</p></div>
+        <div class="risk"><span class="risk-icon">!</span><p>Смертність немовлят залишається вище критичної межі методики, особливо серед хлопців.</p></div>
+        <div class="risk"><span class="risk-icon">!</span><p>Розрив доходів між найбагатшими та найбіднішими 10 % населення значно перевищує критичний поріг.</p></div>
+        <div class="risk"><span class="risk-icon">!</span><p>Борг центрального уряду зріс до 50,27 % ВВП у 2024 році; зовнішньоторговельне співвідношення залишається нижче 1.</p></div>
+      </div></article>
+    </div>
+
+    <section class="insight" style="margin-top:16px"><h4>Узагальнений аналітичний висновок</h4><p>У 2015–2024 роках економічна безпека Мексики характеризувалася неоднорідною динамікою. Відносно стійкими напрямами були врожайність зернових і відновлення тривалості життя після пандемічного спаду. Водночас зберігалися системні ризики: висока смертність немовлят, низькі та спадні витрати на дослідження й розробки, значна нерівність доходів, недостатнє покриття імпорту експортом і зростання боргового навантаження. Отже, ключовими пріоритетами зміцнення економічної безпеки є інвестиції в людський капітал та інновації, зменшення соціальної нерівності, підтримка експортоспроможного виробництва й контроль боргової динаміки. Висновок має індикативний характер, оскільки ґрунтується на обмеженому наборі показників із навчальної таблиці, а окремі показники мають методичні відмінності від офіційних індикаторів.</p></section>
+
+    <div class="source-box">
+      <strong>Методична база та застереження</strong><br>
+      Порогові межі: <a href="https://zakon.rada.gov.ua/rada/show/v1277731-13#Text" target="_blank" rel="noopener">Наказ Мінекономрозвитку № 1277 від 29.10.2013, Додаток 2</a>. Дані за 2015–2024 роки перенесено з наданої екзаменаційної таблиці «Обуховський_Теорія(1).xlsx». Для нерівності наявні спостереження лише за 2016, 2018, 2020, 2022 і 2024 роки; для боргу — за 2019–2024 роки. Показник R&D та боргу мають відмінності в охопленні від відповідних індикаторів методики; це пояснено в картках показників. Методика використовується як навчальна система порівняння, а не як офіційне оцінювання Мексики.
+    </div>
+  </div></section>
+</main>
+<footer class="footer"><div class="container footer-inner"><span>© 2026 · Обуховський Юрій Олегович</span><span><a href="index.html">Головна</a> · Аналітика економічної безпеки Мексики</span></div></footer>
+<script src="data.js"></script><script src="analysis.js"></script>
+</body></html>
